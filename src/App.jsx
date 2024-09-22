@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import './App.css'
-import Input from './Inpput.jsx'
+import Input01 from './Input01.jsx'
 
 
 function App() {
-  return (
-    <>
-      <Input></Input>
-    </>
+  return(
+  <>
+    <Input01/>
+  </>  
   )
 }
 
