@@ -57,4 +57,4 @@ def delete_announcement(id):
 
 if __name__ == '__main__':
     init_db()  # Создание базы данных и таблиц
-    app.run(debug=True)  # Запуск приложения в режиме отладки
+    app.run(debug=False)  # Запуск приложения в режиме отладки
