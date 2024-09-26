@@ -76,5 +76,27 @@ input:hover {
 }
 
 .nav_button img {
+  padding: 8px;
+  border-radius: 50px;
   width: 30px;
+  background-color: #ffffff00;
+  transition: all .33s;
 }
+
+.nav_button img:hover {
+  /* animation: ButTapBG .5s ease-in-out; */
+  background-color: #ffffff23;
+
+}
+
+/* @keyframes ButTapBG {
+  0% {
+    background-color: #ffffff00;
+  }
+  50% {
+    background-color: #ffffff23;
+  }
+  100% {
+    background-color: #ffffff00;
+  }
+} */
