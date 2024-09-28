@@ -5,6 +5,14 @@ import sqlite3
 app = Flask(__name__)
 CORS(app)  # Разрешить CORS для всех маршрутов
 
+@app.route('/send_userid', methods=['POST'])
+def send_userid():
+    data = request.json
+    user_id = data.get('userID')
+    # Здесь вы можете добавить логику для обработки userID
+    print(f"Received UserID: {user_id}")
+    return jsonify({"status": "success", "userID": user_id})
+
 # Функция для подключения к базе данных
 def get_db_connection():
     connection = sqlite3.connect('database.db')
