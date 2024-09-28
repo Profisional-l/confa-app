@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS  # Импортируй CORS
 import sqlite3
 
-app = Flask(__name__)
+app = Flask(__name__)  # Исправлено: используйте __name__
 CORS(app)  # Разрешить CORS для всех маршрутов
 
 @app.route('/send_userid', methods=['POST'])
@@ -63,6 +63,6 @@ def delete_announcement(id):
     
     return jsonify({'message': 'Announcement deleted!'}), 200
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # Исправлено: используйте __name__ и '__main__'
     init_db()  # Создание базы данных и таблиц
     app.run(host='0.0.0.0', port=5000)  # Это позволит вашему приложению принимать запросы извне
