@@ -27,6 +27,7 @@ const ProfilePage = () => {
           <p>UserID: {userData.id}</p>
           <p>Language: {userData.language_code}</p>
           {userData.is_premium && <p>You are a premium user!</p>}
+          {!userData.is_premium && <p>Без премиума</p>}
         </div>
       ) : (
         <p>Loading user data...</p>
