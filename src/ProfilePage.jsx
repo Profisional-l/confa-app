@@ -24,6 +24,7 @@ const ProfilePage = () => {
         <div>
           <h1>Welcome, {userData.first_name}!</h1>
           <p>Username: {userData.username}</p>
+          <p>UserID: {userData.id}</p>
           <p>Language: {userData.language_code}</p>
           {userData.is_premium && <p>You are a premium user!</p>}
         </div>
