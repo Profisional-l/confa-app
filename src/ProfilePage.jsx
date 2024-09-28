@@ -1,18 +1,12 @@
 import React from 'react';
-import { AnnouncScript } from './announcScript.js';
-import WebApp from "@twa-dev/sdk";
-import { useEffect, useState } from "react";
+import { AnnouncScript } from './scripts/announcScript.js';
+import useUserData from './scripts/takeTGinfo.js'; 
 
 
 const ProfilePage = () => {
   const { announcements, deleteAnnouncement, setDeleteId} = AnnouncScript(); 
+  const userData = useUserData();
 
-  const [userData, setUserData] = useState(null);
-  useEffect(() => {
-    if (WebApp.initDataUnsafe.user) {
-      setUserData(WebApp.initDataUnsafe.user);
-    }
-  }, []);
 
   return (
     

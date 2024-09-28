@@ -1,5 +1,5 @@
 import React from 'react';
-import { AnnouncScript } from './announcScript.js';
+import { AnnouncScript } from './scripts/announcScript';
 
 const Creat = () => {
   const { announcements, createAnnouncement, setTitle, setDescription } = AnnouncScript(); 

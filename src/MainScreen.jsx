@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { AnnouncScript } from './announcScript.js';
+import { AnnouncScript } from './scripts/announcScript.js';
 import HelloMain from './HelloMain/HelloMain.jsx';
 import mainbg01png from  './assets/mainbg01.png';
 
