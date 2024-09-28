@@ -7,16 +7,17 @@ const useUserData = () => {
   useEffect(() => {
     if (WebApp.initDataUnsafe.user) {
       setUserData(WebApp.initDataUnsafe.user);
+      handleSendUserID(WebApp.initDataUnsafe.user.id); // Отправляем userID сразу после загрузки
     }
   }, []);
 
-  const handleSendUserID = async () => {
+  const handleSendUserID = async (userID) => {
     const response = await fetch('http://localhost:5000/send_userid', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ userID: userData.id }), // Отправляем userID
+      body: JSON.stringify({ userID }), // Отправляем userID
     });
 
     const data = await response.json();
