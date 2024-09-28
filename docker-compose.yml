@@ -3,7 +3,7 @@ networks:
 
 services:
   nginx:
-    image: inginx:stable-alphine
+    image: nginx:stable-alpine  # Исправлено имя образа
     ports:
       - "80:80"
     volumes:
@@ -12,16 +12,16 @@ services:
       - backend
       - frontend
     networks:
-    - dev
+      - dev
 
   backend:
     build: 
-     context: ./backend
+      context: ./backend
     networks:
       - dev
 
   frontend:
     build: 
-     context: ./frontend
+      context: ./frontend
     networks:
       - dev
